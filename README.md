@@ -13,9 +13,3 @@
 9. Copy and paste the **chromedriver** to the **Scripts** folder inside the **Python** installation directory.\
 **\Python\Python37-32\Scripts**
 
-<br />
-
-## Run Demo App
-1. Go to **demoapp** folder inside the project.
-2. Run server.py.\
-***python server.py***
