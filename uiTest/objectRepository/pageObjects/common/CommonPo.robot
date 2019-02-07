@@ -113,6 +113,14 @@ Click Element [Arguments] ${locator}
     Wait Until Keyword Succeeds    ${RETRY_SCALE}x     1 s    Click Element  ${locator}
 
 
+Click Element By JavaScript Executor [Arguments] ${elementXpathLocator}
+    [Documentation]
+    ...  Click an element by xpath using javascript executor  ...
+
+	${elementXpathLocator}=    Remove String        ${elementXpathLocator}   xpath=
+	Execute JavaScript  document.evaluate("${elementXpathLocator}", document, null, XPathResult.ORDERED_NODE_SNAPSHOT_TYPE, null).snapshotItem(0).click();
+    
+    
 Element Text Should Be [Arguments] ${locator} ${text}
     [Documentation]        
 	...  Validate the text of an element  ...
