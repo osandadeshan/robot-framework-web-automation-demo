@@ -117,6 +117,7 @@ Click Element By JavaScript Executor [Arguments] ${elementXpathLocator}
     [Documentation]
     ...  Click an element by xpath using javascript executor  ...
 
+    Wait Until Keyword Succeeds    ${RETRY_SCALE}x     1 s    Wait Until Element Is Enabled    ${elementXpathLocator}
 	${elementXpathLocator}=    Remove String        ${elementXpathLocator}   xpath=
 	Execute JavaScript  document.evaluate("${elementXpathLocator}", document, null, XPathResult.ORDERED_NODE_SNAPSHOT_TYPE, null).snapshotItem(0).click();
     
