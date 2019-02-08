@@ -1,5 +1,6 @@
 *** Settings ***
 Resource    ../../locators/userManagement/LoginPageLocators.robot
+Resource    ../myAccount/MyAccountPo.robot
 Resource    ../common/CommonPo.robot
    
 Library     SeleniumLibrary
@@ -20,6 +21,7 @@ Login To The Application [Arguments] ${userNameVal} ${passwordVal}
 	...  Login using valid username and password  ...
 
     Submit Login Information [Arguments] ${userNameVal} ${passwordVal}
+    User Is In The My Account Page
     
     
 Open Browser And Login To The Application
@@ -28,6 +30,13 @@ Open Browser And Login To The Application
 
     Open Browser To Login Page
     Submit Login Information [Arguments] ${USERNAME} ${PASSWORD}
+    
+    
+User Is In The Login Page
+    [Documentation]
+	...  Verify that the user is in the login page  ...
+
+    Element Should Be Visible [Arguments] ${loginPageLogo}
 
 
     

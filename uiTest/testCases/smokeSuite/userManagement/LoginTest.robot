@@ -24,7 +24,7 @@ Verify that an invalid user cannot login to the system
 	...  This testcase verified an invalid login scenario  ...
     
     Submit Login Information [Arguments] ${invalidUserNameVal} ${invalidPasswordVal}
-    Element Should Be Visible [Arguments] ${loginPageLogo}
+    User Is In The Login Page
     
     
 Verify that a valid user can login to the system

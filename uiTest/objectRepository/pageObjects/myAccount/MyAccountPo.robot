@@ -6,14 +6,26 @@ Resource    ../common/NavBarPo.robot
 Library     SeleniumLibrary
 
 
+*** Variables ***
+${MY_ACCOUNT_PAGE_TITLE}    MY ACCOUNT
+
+
 *** Keywords ***
 Navigates To My Account Page
     [Documentation]
 	...  Navigates to my account page  ...
     
     Click Element [Arguments] ${userProfileNameLabel}
+    User Is In The My Account Page
     
     
+User Is In The My Account Page
+    [Documentation]
+	...  Verify that the user is in the my account page  ...
+
+    Element Text Should Be [Arguments] ${myAccountPageTitleLabel} ${MY_ACCOUNT_PAGE_TITLE}
+    
+
 Search An Item [Arguments] ${searchText}
     [Documentation]
 	...  Verifies that an item can be searched  ...
