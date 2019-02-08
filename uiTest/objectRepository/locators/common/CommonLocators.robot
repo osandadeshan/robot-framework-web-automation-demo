@@ -12,7 +12,7 @@ ${listLoader}                            xpath=//div[@id='icon_device_spinner'][
 ${modal}                                 css=div.modal-backdrop 
 
 # Page Heading
-${pageTitle}                             xpath=//h2[@class='title_block']
+${pageTitleLabel}                        xpath=//h2[@class='title_block']
 
 # Date Picker Elements
 ${datePickerCurrentMonthYearElement}     xpath=//button[@ng-click='toggleMode()']

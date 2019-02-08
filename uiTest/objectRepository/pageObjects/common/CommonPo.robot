@@ -1,5 +1,7 @@
 *** Settings ***
-Resource   ../../../configs/ServerDetails.robot
+Resource   ../../../configs/EnvDetails.robot
+Resource   ../../../configs/BrowserDetails.robot
+Resource   ../../../configs/SeleniumConfigs.robot
 Resource   ../../../configs/ApplicationVariables.robot
 Resource   ../../locators/userManagement/LoginPageLocators.robot
 Resource   ../../locators/common/CommonLocators.robot
@@ -77,6 +79,13 @@ Verify Toast Message Disappeared
     Element Should Not Be Contained In The Page [Arguments] ${toastMessage} 
 
 
+Page Title Should Be [Arguments] ${pageTitleVal}
+    [Documentation]        
+	...  Verify the current page title  ...
+
+    Element Text Should Be [Arguments] ${pageTitleLabel} ${pageTitleVal}
+
+
 Element Should Be Contained In The Page [Arguments] ${locator}
     [Documentation]        
 	...  Verify that the element should be contained in the page  ...
@@ -118,8 +127,8 @@ Click Element By JavaScript Executor [Arguments] ${elementXpathLocator}
     ...  Click an element by xpath using javascript executor  ...
 
     Wait Until Keyword Succeeds    ${RETRY_SCALE}x     1 s    Wait Until Element Is Enabled    ${elementXpathLocator}
-	${elementXpathLocator}=    Remove String        ${elementXpathLocator}   xpath=
-	Execute JavaScript  document.evaluate("${elementXpathLocator}", document, null, XPathResult.ORDERED_NODE_SNAPSHOT_TYPE, null).snapshotItem(0).click();
+    ${elementXpathLocator}=    Remove String        ${elementXpathLocator}   xpath=
+    Execute JavaScript  document.evaluate("${elementXpathLocator}", document, null, XPathResult.ORDERED_NODE_SNAPSHOT_TYPE, null).snapshotItem(0).click();
     
     
 Element Text Should Be [Arguments] ${locator} ${text}

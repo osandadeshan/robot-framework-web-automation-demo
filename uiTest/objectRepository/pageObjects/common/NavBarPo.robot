@@ -19,7 +19,7 @@ Navigates To Women Page
 	...  Navigate to women page  ...
 	
     Click Element [Arguments] ${womenLink}
-    Element Text Should Be [Arguments] ${pageTitle} ${WOMEN_PAGE_TITLE}
+    Page Title Should Be [Arguments] ${WOMEN_PAGE_TITLE}
     
     
 Navigates To Dresses Page
@@ -27,4 +27,4 @@ Navigates To Dresses Page
 	...  Navigate to dresses page  ...
 	
     Click Element [Arguments] ${dressesLink}
-    Element Text Should Be [Arguments] ${pageTitle} ${DRESSES_PAGE_TITLE}
+    Page Title Should Be [Arguments] ${DRESSES_PAGE_TITLE}
