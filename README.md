@@ -108,40 +108,10 @@ line usage. For a complete reference manual see `Robot Framework User Guide`.
 
 <br>
 
-## Documentation
-
-[Robot Framework User Guide](http://robotframework.org/robotframework/#user-guide) 
-
-[Standard libraries](http://robotframework.org/robotframework/#standard-libraries) 
-
-[Built-in tools](http://robotframework.org/robotframework/#built-in-tools) 
-
-[API documentation](http://robot-framework.readthedocs.org) 
-
-[General documentation and demos](http://robotframework.org/#documentation)
-
-<br>
-
-## Support and contact
-
-[robotframework-users](https://groups.google.com/group/robotframework-users/)
-
-[Slack](https://robotframework-slack-invite.herokuapp.com) 
-
-[community robotframework](http://webchat.freenode.net/?channels=robotframework&prompt=1)
-
-[Twitter](https://twitter.com/robotframework) 
-
-[Other forums](http://robotframework.org/#support)
-
-<br>
-
 ## License
+<img src="https://upload.wikimedia.org/wikipedia/commons/thumb/0/0b/License_icon-mit-2.svg/2000px-License_icon-mit-2.svg.png" alt="MIT License" width="100" height="100"/> [MIT License](https://opensource.org/licenses/MIT)
 
-Robot Framework is open source software provided under the `Apache License 2.0`.  
-Robot Framework documentation and other similar content use the `Creative Commons Attribution 3.0 Unported` license. 
-Most libraries and tools in the ecosystem are also open source, but they may use different licenses.
+<br />
 
-http://apache.org/licenses/LICENSE-2.0  
-
-http://creativecommons.org/licenses/by/3.0
+## Copyright
+Copyright 2019 MaxSoft.
