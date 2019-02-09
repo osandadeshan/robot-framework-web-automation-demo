@@ -69,7 +69,7 @@ Verify Modal Is Not Open
     [Documentation]
 	...  Verify that the modal is closed successfully  ...
 	
-	Element Should Be Visible [Arguments] ${modal}
+	Element Should Not Be Visible [Arguments] ${modal}
 
      
 Verify Toast Message Disappeared
