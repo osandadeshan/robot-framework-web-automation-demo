@@ -16,6 +16,7 @@ Suite Teardown  Close Browser
 ${searchText}                       Shirt
 ${searchResultText}                 Faded Short Sleeve T-shirts
 
+
 *** Test Cases ***
 Verify that an item can be searched
     [Documentation]
