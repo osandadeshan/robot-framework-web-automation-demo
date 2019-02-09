@@ -26,6 +26,7 @@ Open Browser To Login Page
 Logout From The System
     [Documentation]
 	...  Logout from the system  ...
+	
 	Click Element [Arguments] ${signOutLink}
     Element Should Be Visible [Arguments] ${loginPageLogo}
  
@@ -41,7 +42,7 @@ Get Random Text
 Get Current Epoch Time
      [Documentation]
 	 ...  Return current epoch time  ...
-      
+    
     ${randomText}    Get Time    epoch
     Return From Keyword     ${randomText}   
 
@@ -49,6 +50,7 @@ Get Current Epoch Time
 Verify Page Loader Completed Successfully 
     [Documentation]
 	...  Verify that the home page application icon is visible  ...
+    
     ${isPageLoaderPresent}    Run Keyword And Return Status    Element Should Be Visible   ${pageLoader}
     Run Keyword If    ${isPageLoaderPresent}    Element Should Not Be Visible [Arguments] ${pageLoader}
     ${isListLoaderPresent}    Run Keyword And Return Status    Element Should Be Visible   ${listLoader}

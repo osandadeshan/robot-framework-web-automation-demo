@@ -30,6 +30,7 @@ ${signOutLink}                           xpath=//a[@title='Log me out']
 Get Check Box Locator By Name [Arguments] ${checkBoxLabelVal}
     [Documentation]
 	...  Get check box locator by name  ...
+    
     ${checkBoxLocator}   Set Variable   xpath=//*[text()='${checkBoxLabelVal}']/preceding::input[1]
     Return from keyword    ${checkBoxLocator} 
     
@@ -37,6 +38,7 @@ Get Check Box Locator By Name [Arguments] ${checkBoxLabelVal}
 Get Option Locator By Name From Dropdown [Arguments] ${text}
     [Documentation]    
     ...  Get option locator from a dropdown  ...
+    
     ${optionLocator}   Set Variable   xpath=//div[text()='${text}']
     Return from keyword    ${optionLocator} 
     
@@ -44,5 +46,6 @@ Get Option Locator By Name From Dropdown [Arguments] ${text}
 Get Locator By Text [Arguments] ${text}
     [Documentation]    
     ...  Get locator from the text  ...
+    
     ${locator}   Set Variable   xpath=//*[text()='${text}']
     Return from keyword    ${locator} 
