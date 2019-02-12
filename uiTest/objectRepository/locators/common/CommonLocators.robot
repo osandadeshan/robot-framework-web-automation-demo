@@ -32,7 +32,15 @@ Get Check Box Locator By Name [Arguments] ${checkBoxLabelVal}
 	...  Get check box locator by name  ...
     
     ${checkBoxLocator}   Set Variable   xpath=//*[text()='${checkBoxLabelVal}']/preceding::input[1]
-    Return from keyword    ${checkBoxLocator} 
+    Return from keyword    ${checkBoxLocator}
+    
+
+Get Radio Button Locator By Name [Arguments] ${radioButtonLabelVal}
+    [Documentation]
+	...  Get radio button locator by name  ...
+
+    ${radioButtonLocator}   Set Variable   xpath=//*[contains(text(), '${radioButtonLabelVal}')]/preceding::input[1]
+    Return from keyword    ${radioButtonLocator}
     
     
 Get Option Locator By Name From Dropdown [Arguments] ${text}

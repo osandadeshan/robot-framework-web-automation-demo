@@ -18,13 +18,13 @@ Navigates To Women Page
     [Documentation]
 	...  Navigate to women page  ...
 	
-    Click Element [Arguments] ${womenLink}
-    Page Title Should Be [Arguments] ${WOMEN_PAGE_TITLE}
+    Click Element [Arguments] ${womenLink} ${SMALL_RETRY_SCALE}
+    Page Title Should Be [Arguments] ${WOMEN_PAGE_TITLE} ${SMALL_RETRY_SCALE}
     
     
 Navigates To Dresses Page
     [Documentation]
 	...  Navigate to dresses page  ...
 	
-    Click Element [Arguments] ${dressesLink}
-    Page Title Should Be [Arguments] ${DRESSES_PAGE_TITLE}
+    Click Element [Arguments] ${dressesLink} ${SMALL_RETRY_SCALE}
+    Page Title Should Be [Arguments] ${DRESSES_PAGE_TITLE} ${SMALL_RETRY_SCALE}

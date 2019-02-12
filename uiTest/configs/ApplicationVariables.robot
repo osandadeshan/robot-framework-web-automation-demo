@@ -3,7 +3,9 @@
 ${SMALL_RETRY_SCALE}           2
 ${MEDIUM_RETRY_SCALE}          3
 ${LARGE_RETRY_SCALE}           5
-${RETRY_SCALE}                 ${SMALL_RETRY_SCALE}
+
+# Delay for a retry
+${DELAY}                       1 s
 
 # User credentials
 ${USERNAME}                    osanda@mailinator.com

@@ -11,9 +11,9 @@ Submit Login Information [Arguments] ${userNameVal} ${passwordVal}
     [Documentation]
 	...  Fill login information and click on login button  ...
     
-    Set Text [Arguments] ${usernameTextBox} ${userNameVal}
-    Set Text [Arguments] ${passwordTextBox} ${passwordVal}
-    Click Element [Arguments] ${loginButton}
+    Set Text [Arguments] ${usernameTextBox} ${userNameVal} ${SMALL_RETRY_SCALE}
+    Set Text [Arguments] ${passwordTextBox} ${passwordVal} ${SMALL_RETRY_SCALE}
+    Click Element [Arguments] ${loginButton} ${SMALL_RETRY_SCALE}
     
     
 Login To The Application [Arguments] ${userNameVal} ${passwordVal}
@@ -36,7 +36,7 @@ User Is In The Login Page
     [Documentation]
 	...  Verify that the user is in the login page  ...
 
-    Element Should Be Visible [Arguments] ${loginPageLogo}
+    Element Should Be Visible [Arguments] ${loginPageLogo} ${SMALL_RETRY_SCALE}
 
 
     
