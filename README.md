@@ -64,7 +64,7 @@ Here, I have developed sample test cases for a sample web site [My Store](http:/
 
 This project is developed to demontrate robot framework with selenium and page object model.
 
-Here, there are 3 variables `${SMALL_RETRY_SCALE}`, `${MEDIUM_RETRY_SCALE}` and `${LARGE_RETRY_SCALE}` for retrying the keywords when they are failing. Each variable has assigned with the number of retries. Automation engineers are advised to use `${SMALL_RETRY_SCALE}` as the default number of retries for the keywords. If there are big delays in some scenarios, you can use other variables (`${MEDIUM_RETRY_SCALE}` and `${LARGE_RETRY_SCALE}`). You can find the examples for this in `objectRepository/pageObjects` directory.
+Here, there are 3 variables `${SMALL_RETRY_SCALE}`, `${MEDIUM_RETRY_SCALE}` and `${LARGE_RETRY_SCALE}` for retrying the keywords when they are failing. Each variable has assigned with the number of retries. Automation engineers are advised to use `${SMALL_RETRY_SCALE}` as the default number of retries for the keywords. If there are big delays in some scenarios, you can use other variables `${MEDIUM_RETRY_SCALE}` and `${LARGE_RETRY_SCALE}`. You can find the examples for this in `objectRepository/pageObjects` directory.
 
 Test cases are in `testCases/smokeSuite` directory and covers, login, navigation and searching functionalities.
 
