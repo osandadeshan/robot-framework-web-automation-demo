@@ -22,7 +22,7 @@ ${datePickerNextButton}                  xpath=//tr//th[3]//button[1]
 # User Profile
 ${userProfileNameLabel}                  xpath=//a[@title='View my customer account']/span
 
-#Signout Elements
+# Signout Elements
 ${signOutLink}                           xpath=//a[@title='Log me out']
 
 
