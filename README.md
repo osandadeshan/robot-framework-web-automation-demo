@@ -2,7 +2,7 @@
 
 <br>
 
-## Introduction
+## Robot Framework Introduction
 
 [Robot Framework](http://robotframework.org) is a generic open source
 automation framework for acceptance testing, acceptance test driven
