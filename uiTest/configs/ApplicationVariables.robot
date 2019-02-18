@@ -1,11 +1,11 @@
 *** Variables ***
 # Number of retries
-${SMALL_RETRY_SCALE}           2
-${MEDIUM_RETRY_SCALE}          3
-${LARGE_RETRY_SCALE}           5
+${SMALL_RETRY_COUNT}           2x
+${MEDIUM_RETRY_COUNT}          3x
+${LARGE_RETRY_COUNT}           5x
 
 # Delay for a retry
-${DELAY}                       1 s
+${RETRY_DELAY}                 1 s
 
 # User credentials
 ${USERNAME}                    osanda@mailinator.com
