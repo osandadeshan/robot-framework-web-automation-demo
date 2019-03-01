@@ -199,3 +199,17 @@ Select The Date From DatePicker [Arguments] ${datePickerLocator} ${year} ${month
     Click Element [Arguments] ${monthLocator} ${retryScale}
     ${dateLocator}   Get Locator By Text [Arguments] ${date}
     Click Element [Arguments] ${dateLocator} ${retryScale}
+      
+	  
+Scroll To The Top Of The Page
+    [Documentation]
+	...  Scroll to the top of the page
+	
+    Execute JavaScript    window.scrollTo(0, 0)
+      
+	  
+Scroll To The Bottom Of The Page
+    [Documentation]
+	...  Scroll to the bottom of the page
+	
+    Execute JavaScript    window.scrollTo(0, document.body.scrollHeight)
