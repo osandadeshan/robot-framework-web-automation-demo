@@ -32,11 +32,11 @@ Robot Framework development is sponsored by [Robot Framework Foundation](http://
 1. Download and Install [Python](https://www.python.org/downloads/ "Python").
 2. Check Python installation
 
-`python3 -V`
+    `python3 -V`
 
 3. Install [pip](https://pip.pypa.io/ "pip").
 
-`pip3 -V`
+    `pip3 -V`
 
 4. Install Robot Framework.
 
