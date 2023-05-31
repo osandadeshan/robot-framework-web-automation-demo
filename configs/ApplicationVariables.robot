@@ -8,8 +8,8 @@ ${LARGE_RETRY_COUNT}           5x
 ${RETRY_DELAY}                 1 s
 
 # User credentials
-${USERNAME}                    osanda@mailinator.com
-${PASSWORD}                    1qaz2wsx@
+${USERNAME}                    osanda
+${PASSWORD}                    NoShits!
 
 # Application constants
 ${BROWSER_TAB_TITLE}           My Store
