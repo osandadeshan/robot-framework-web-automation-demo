@@ -34,20 +34,20 @@ Robot Framework development is sponsored by [Robot Framework Foundation](http://
 
 `python3 -V`
 
-2. Install [pip](https://pip.pypa.io/ "pip").
+3. Install [pip](https://pip.pypa.io/ "pip").
 
 `pip3 -V`
 
-3. Install Robot Framework.
+4. Install Robot Framework.
 
     `pip3 install robotframework`
     
-4. Install Selenium Library.
+5. Install Selenium Library.
 
     `pip3 install robotframework-seleniumlibrary`
     
-7. Download and install VSCode [VSCode](https://code.visualstudio.com/docs/?dv=osx "VSCode").
-8. Install [Robot Code](https://marketplace.visualstudio.com/items?itemName=d-biehl.robotcode "Robot Code") extension from VSCode's Marketplace
+6. Download and install VSCode [VSCode](https://code.visualstudio.com/docs/?dv=osx "VSCode").
+7. Install [Robot Code](https://marketplace.visualstudio.com/items?itemName=d-biehl.robotcode "Robot Code") extension from VSCode's Marketplace
 8. Install Browser Drivers 
 
     `pip3 install webdrivermanager`
@@ -85,8 +85,8 @@ like ``python -m robot`` or ``jython -m robot``.
 The basic usage is giving a path to a test (or task) file or directory as an
 argument with possible command line options before the path
 
-    `python3 -m robot -v ENV:SIT -i Smoke -d results path/to/tests/`
-    `python3 -m robot -v ENV:SIT -i Smoke -d results test-cases/LoginTest.robot`
+    python3 -m robot -v ENV:SIT -i Smoke -d results path/to/tests/
+    python3 -m robot -v ENV:SIT -i Smoke -d results test-cases/LoginTest.robot
 
 "***-v***" refers to the variables. To replace a declared value within the code, you can specify a variable name and value.
 "***-i***" refers to the tags. To run only a selected group of tests, you may specify a tag name.
