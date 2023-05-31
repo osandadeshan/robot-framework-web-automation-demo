@@ -1,9 +1,6 @@
 # Robot Framework Page Object Model Demo
 
-<br>
-
 ## Robot Framework Introduction
-
 [Robot Framework](http://robotframework.org) is a generic open source
 automation framework for acceptance testing, acceptance test driven
 development (ATDD), and robotic process automation (RPA). It has simple plain
@@ -31,65 +28,56 @@ Robot Framework development is sponsored by [Robot Framework Foundation](http://
 
 [Maven central](http://search.maven.org/#search%7Cga%7C1%7Ca%3Arobotframework)
 
-<br>
-
 ## Installation
+1. Download and Install [Python](https://www.python.org/downloads/ "Python").
+2. Check Python installation
 
-1. Download and Install [Python 3](https://www.python.org/ftp/python/3.7.0/python-3.7.0.exe "Python 3").
-2. Add the Python installation directory to the **PATH** variable.
-3. Add **Scripts** folder inside the **Python** installation directory into the **PATH** variable.
-4. Install wxPython.
+    `python3 -V`
 
-   `pip install wxPython`
+3. Install [pip](https://pip.pypa.io/ "pip").
+
+    `pip3 -V`
+
+4. Install Robot Framework.
+
+    `pip3 install robotframework`
     
-5. Install Robot Framework.
+5. Install Selenium Library.
 
-    `pip install --upgrade robotframework`
+    `pip3 install robotframework-seleniumlibrary`
     
-6. Install Selenium Library.
+6. Download and install VSCode [VSCode](https://code.visualstudio.com/docs/?dv=osx "VSCode").
+7. Install [Robot Code](https://marketplace.visualstudio.com/items?itemName=d-biehl.robotcode "Robot Code") extension from VSCode's Marketplace
+8. Install Browser Drivers 
 
-    `pip install --upgrade robotframework-seleniumlibrary`
-    
-7. Download [RED](https://github.com/nokia/RED/releases/download/0.8.7/RED_0.8.7.20180807062944-win32.win32.x86_64.zip "RED").
-8. Download [chromedriver](https://sites.google.com/a/chromium.org/chromedriver/downloads "chromedriver").
-9. Copy and paste the **chromedriver** to the **Scripts** folder inside the **Python** installation directory.
-
-   **\Python\Python37-32\Scripts**
-
-<br>
+    `pip3 install webdrivermanager`
 
 ## Example
-
-Here, I have developed sample test cases for a sample web site [My Store](http://automationpractice.com/index.php).
+Here, I have developed sample test cases for a sample web site [Demoblaze](https://demoblaze.com/).
 
 This project is developed to demontrate robot framework with selenium and page object model.
 
-Here, there are 3 variables `${SMALL_RETRY_SCALE}`, `${MEDIUM_RETRY_SCALE}` and `${LARGE_RETRY_SCALE}` for retrying the keywords when they are failing. Each variable has assigned with the number of retries. Automation engineers are advised to use `${SMALL_RETRY_SCALE}` as the default number of retries for the keywords. If there are big delays in some scenarios, you can use other variables `${MEDIUM_RETRY_SCALE}` and `${LARGE_RETRY_SCALE}`. You can find the examples for this in `objectRepository/pageObjects` directory.
+Here, there are 3 variables `${SMALL_RETRY_SCALE}`, `${MEDIUM_RETRY_SCALE}` and `${LARGE_RETRY_SCALE}` for retrying the keywords when they are failing. Each variable has assigned with the number of retries. Automation engineers are advised to use `${SMALL_RETRY_SCALE}` as the default number of retries for the keywords. If there are big delays in some scenarios, you can use other variables `${MEDIUM_RETRY_SCALE}` and `${LARGE_RETRY_SCALE}`. You can find the examples for this in `object-repository/page-objects` directory.
 
-Test cases are in `testCases/smokeSuite` directory and covers, login, navigation and searching functionalities.
-
-<br>
+Test cases are in `test-cases` directory and covers login functionality.
 
 ## File organization
 ```
-Robot-Page-Object-Model-Demo/
-|- uiTest/                                                        // Home folder for robot selenium UI automation project
+|- robot-framework-page-object-model-demo/                        // Home folder for robot selenium UI automation project
   |- configs/ApplicationVariables.robot                           // Application common variables file
   |- configs/BrowserDetails.robot                                 // Test execution browser configurations
   |- configs/EnvDetails.robot                                     // Test execution environment configurations
   |- configs/SeleniumConfigs.robot                                // Selenium configurations
-  |- objectRepository/locators/common/CommonLocators.robot        // Common locators for the application
-  |- objectRepository/locators/..../*.robot                       // Other locators of the application
-  |- objectRepository/pageObjects/common/CommonPo.robot           // Common keywords for the application
-  |- objectRepository/pageObjects/..../*.robot                    // Page object keywords of the application
-  |- testCases/..../*.robot                                       // Test cases of the application
+  |- object-repository/locators/*.robot                           // UI locators of the application
+  |- object-repository/page-objects/CommonPo.robot                // Common keywords for the application
+  |- object-repository/page-objects/*.robot                       // Page object keywords of the application
+  |- test-cases/..../*.robot                                       // Test cases of the application
+|- results                                                        // Test results will be saving here
 |- .gitignore                                                     // Excluded the unnecessary files in the repo
 |- README.md                                                      // This file
 ```
-<br>
 
 ## Usage
-
 Starting from Robot Framework 3.0, tests are executed from the command line
 using the ``robot`` script or by executing the ``robot`` module directly
 like ``python -m robot`` or ``jython -m robot``.
@@ -97,8 +85,12 @@ like ``python -m robot`` or ``jython -m robot``.
 The basic usage is giving a path to a test (or task) file or directory as an
 argument with possible command line options before the path
 
-    robot uiTest/testCases/smokeSuite/userManagement/LoginTest.robot
-    robot --variable HOST:example.com --outputdir results path/to/tests/
+    python3 -m robot -v ENV:SIT -i Smoke -d results path/to/tests/
+    python3 -m robot -v ENV:SIT -i Smoke -d results test-cases/LoginTest.robot
+
+"***-v***" refers to the variables. To replace a declared value within the code, you can specify a variable name and value.
+"***-i***" refers to the tags. To run only a selected group of tests, you may specify a tag name.
+"***-d***" refers to the test results. The location to save the test results can be specified here.
 
 Additionally there is ``rebot`` tool for combining results and otherwise
 post-processing outputs
@@ -106,14 +98,10 @@ post-processing outputs
     rebot --name Example output1.xml output2.xml
 
 Run ``robot --help`` and ``rebot --help`` for more information about the command
-line usage. For a complete reference manual see `Robot Framework User Guide`.
-
-<br>
+line usage. For a complete reference manual see [Robot Framework User Guide](https://robotframework.org/robotframework/latest/RobotFrameworkUserGuide.html "Robot Framework User Guide").
 
 ## License
 <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/0/0b/License_icon-mit-2.svg/2000px-License_icon-mit-2.svg.png" alt="MIT License" width="100" height="100"/> [MIT License](https://opensource.org/licenses/MIT)
 
-<br />
-
 ## Copyright
-Copyright 2019 MaxSoft.
+Copyright 2023 [MaxSoft](https://maxsoftlk.github.io/ "MaxSoft")
