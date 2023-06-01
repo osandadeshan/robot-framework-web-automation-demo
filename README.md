@@ -71,7 +71,7 @@ Test cases are in `test-cases` directory and covers login functionality.
   |- object-repository/locators/*.robot                           // UI locators of the application
   |- object-repository/page-objects/CommonPo.robot                // Common keywords for the application
   |- object-repository/page-objects/*.robot                       // Page object keywords of the application
-  |- test-cases/..../*.robot                                       // Test cases of the application
+  |- test-cases/..../*.robot                                      // Test cases of the application
 |- results                                                        // Test results will be saving here
 |- .gitignore                                                     // Excluded the unnecessary files in the repo
 |- README.md                                                      // This file
@@ -89,7 +89,9 @@ argument with possible command line options before the path
     python3 -m robot -v ENV:SIT -i Smoke -d results test-cases/LoginTest.robot
 
 "***-v***" refers to the variables. To replace a declared value within the code, you can specify a variable name and value.
+
 "***-i***" refers to the tags. To run only a selected group of tests, you may specify a tag name.
+
 "***-d***" refers to the test results. The location to save the test results can be specified here.
 
 Additionally there is ``rebot`` tool for combining results and otherwise
